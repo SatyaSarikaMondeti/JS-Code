@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tollywood Stars</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="keys">
+        <div data-key="67" class="key">
+            <kbd>C</kbd>
+        <span class ="sound">Chiranjeevi</span>
+        </div>
+        <div data-key="80" class="key">
+            <kbd>P</kbd>
+        <span class="sound">Pawan Kalyan</span>
+        </div>
+        <div data-key="66" class="key">
+            <kbd>B</kbd>
+        <span class="sound">Bunny</span>
+        </div>
+        <div data-key="77" class="key">
+            <kbd>M</kbd>
+        <span class="sound">Mahesh Babu</span>
+        </div>
+        <div data-key="82" class="key">
+            <kbd>R</kbd>
+        <span class="sound">Ram Charan</span>
+        </div>
+        <div data-key="86" class="key">
+            <kbd>V</kbd>
+        <span class="sound">Venkatesh</span>
+        </div>
+        <div data-key="78" class="key">
+            <kbd>N</kbd>
+        <span class="sound">NTR</span>
+    </div>
+
+ <audio data-key="80" src="songs/[iSongs.info] 01 - Hungry Cheetah OG Glimpse.mp3"></audio>
+ <audio data-key="77" src="songs/[iSongs.info] 01 - Dum Masala.mp3"></audio>
+ <audio data-key="78" src="songs/[iSongs.info] 08 - Masthu Masthu.mp3"></audio>
+ <audio data-key="67" src="songs/[iSongs.info] 13 - Shankerdada M.B.B.S.mp3"></audio>
+ <audio data-key="82" src="songs/[iSongs.info] 13 - Rachcha.mp3"></audio>
+ <audio data-key="66" src="songs/[iSongs.info] 01 - Pushpa Pushpaa.mp3"></audio>
+ <audio data-key="86" src="songs/Venky Mama - SenSongsMp3.Co.mp3"></audio>
+<script>
+    window.addEventListener('keydown',function(e){
+        const audio=document.querySelector(`audio[data-key="${e.keyCode}"]`)
+        const key=document.querySelector(`audio[data-key="${e.keyCode}"]`)
+        if(!audio)return;
+        audio.currentTime=10;
+        audio.play();
+        console.log(key);
+        key.classList.add('playing');
+        
+    });
+    function removeTransition(e){
+        if(e.propertyName !== 'transform')return;
+        this.classList.remove('playing');
+    }
+        const keys=document.querySelectorAll('.key');
+        keys.forEach(key => key.addEventListener('transitionend', removeTransition));
+    
+    
+</script>
+</body>
+</html>

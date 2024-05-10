@@ -1,0 +1,47 @@
+*{
+    margin :0;
+    padding: 2px;;
+    font-family:'Poppins',sans-serif;
+    box-sizing: border-box;
+    
+}
+body{
+    background-image:url("https://static.vecteezy.com/system/resources/previews/007/619/941/original/music-background-with-party-crowd-free-vector.jpg");
+    background-repeat: no-repeat;
+    background-position:center;
+}
+.keys{
+    width: 100vw;
+    height: 100vh;
+    align-items:center;
+    justify-content :center;
+    display: flex;
+}
+.key{
+    border : 5px solid rgb(223, 30, 30);
+    border-radius : 6px;
+    margin :1rem;
+    font-size : 1.5rem;
+    padding:1rem .6rem;
+    transition:all 200s;
+    width:200px;
+    text-align:center;
+    color:white;
+    background:rgba(0,0,0,0.4);
+    text-shadow:0 0 5px rgb(244, 240, 240);
+    }
+.playing{
+    transform:scale(10);
+    border-color:#ffc600;
+    box-shadow:0 0 10px #4f24dd;
+}
+kbd{
+    display:block;
+    font-size:40px;
+}
+.sound{
+    font-size:1.2rem;
+    text-transform:uppercase;
+    letter-spacing: 1px;
+    color:#ffc600;
+}
